@@ -62,7 +62,9 @@ router.get('/', function (req, res, next) {
         }
     });
 });
-
+/**
+ * 获取果壳谣言粉碎机内容
+ */
 router.get('/guokr', function (req, res, next) {
     superagent.get('http://www.guokr.com/scientific/channel/fact/')
         .end(function (err, sres) {
@@ -87,4 +89,5 @@ router.get('/guokr', function (req, res, next) {
             res.send('ok');
         });
 });
+
 module.exports = router;

@@ -5,11 +5,19 @@ var db = require('./db');
 
 var Article = db.define('article', {
     id: {type: 'serial', key: true},
-    title:{type:'text'},
+    title: {type: 'text'},
     href: {type: 'text'},
     img: {type: 'text'},
     author: {type: 'text'},
     content: {type: 'text'}
+}, {
+    methods: {
+        save: function (callback) {
+            Article.save(this, function (err, result) {
+                callback(err, result);
+            });
+        }
+    }
 });
 
 Article.prototype.getHref = function (callback) {
