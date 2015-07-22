@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>one</title>
+    <% include ../template/header.ejs %>
+    <style type="text/css">
+        body {
+            font-family: "Open Sans", "Helvetica Neue", Helvetica, "BBAlpha Sans", "S60 Sans", Arial, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+            font-size: 15px;
+            margin-top: 30px;
+        }
+
+        h1, h2, h3 {
+            font-family: "Open Sans", "Helvetica Neue", Helvetica, "BBAlpha Sans", "S60 Sans", Arial, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+            font-weight: 300;
+        }
+
+        #content {
+            border-right: 1px solid #dddddd;
+        }
+    </style>
+</head>
+<body>
+<% include ../template/nav.ejs %>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-8" id="content">
+            <% if(article){ %>
+            <input type="hidden" value="<%= article.id %>">
+
+            <h2><%= article.title %></h2>
+
+            <h3> <%= article.author %></h3>
+            <hr/>
+            <%- article.content %>
+            <% } %>
+
+        </div>
+
+        <div class="col-md-4" id="list">
+            <% if(list.length){ %>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">最新文章</h3>
+                </div>
+                <div class="panel-body list-group">
+                    <% list.forEach(function(item){ %>
+                    <% if(article && item.id == article.id){ %>
+                    <a class="list-group-item active" href="/one/<%= item.id %>"><%= item.title %></a>
+                    <% }else{ %>
+                    <a class="list-group-item" href="/one/<%= item.id %>"><%= item.title %></a>
+                    <% } %>
+                    <% });} %>
+                </div>
+            </div>
+        </div>
+    </div>
+    <%include ../template/footer.ejs%>
+</div>
+
+</body>
+</html>

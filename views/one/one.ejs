@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <% include ../template/header.ejs %>
+    <style>
+        .container-fluid{
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+<% include ../template/nav %>
+<div class="container-fluid">
+    <div class="row">
+        <% if(data.length){ %>
+        <ul class="list-group">
+            <% data.forEach(function(name){ %>
+            <li class="list-group-item"><a href="/one/<%= name.id %>"><%= name.title %></a></li>
+            <% }); %>
+        </ul>
+        <% } %>
+    </div>
+</div>
+<%include ../template/footer.ejs%>
+</body>
+</html>

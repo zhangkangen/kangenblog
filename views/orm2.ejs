@@ -1,0 +1,1218 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <% include template/header.ejs %>
+</head>
+<body>
+<% include template/nav.ejs %>
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <nav class="hidden-print hidden-xs hidden-sm ">
+                <ol class="nav list-group" data-spy="affix">
+                            <li><a href="#Connection-to-Database">Connection to Database</a></li>
+                            <li><a href="#Settings">Settings</a></li>
+                            <li>
+                                <a href="">Defining Models</a>
+                                <ol>
+                                    <li><a href="">Model Properties</a></li>
+                                    <li><a href="">Model Validations</a></li>
+                                    <li><a href="">Model Hooks</a></li>
+                                    <li><a href="">Model Cache</a></li>
+                                </ol>
+                            </li>
+                            <li>
+                                <a href="">Defining Associations</a>
+                                <ol>
+                                    <li><a href="">hasOne</a></li>
+                                    <li><a href="">hsaMany</a></li>
+                                    <li><a href="">extendsTo</a></li>
+                                </ol>
+                            </li>
+                            <li><a href="">Syncing and Dropping Models</a></li>
+                            <li><a href="">Finding items</a></li>
+                            <li><a href="">Creating and Updating items</a></li>
+                            <li><a href="">Aggregation</a></li>
+                            <li>
+                                <a href="">Development</a>
+                                <ol>
+                                    <li><a href="">Testing</a></li>
+                                    <li><a href="">Contributing</a></li>
+                                </ol>
+                            </li>
+                        </ol>
+
+            </nav>
+        </div>
+        <div class="col-md-9">
+            <div id="home">
+                <ol>
+                    <li><a href="#Connection-to-Database">Connection to Database</a></li>
+                    <li><a href="#Settings">Settings</a></li>
+                    <li>
+                        <a href="">Defining Models</a>
+                        <ol>
+                            <li><a href="">Model Properties</a></li>
+                            <li><a href="">Model Validations</a></li>
+                            <li><a href="">Model Hooks</a></li>
+                            <li><a href="">Model Cache</a></li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a href="">Defining Associations</a>
+                        <ol>
+                            <li><a href="">hasOne</a></li>
+                            <li><a href="">hsaMany</a></li>
+                            <li><a href="">extendsTo</a></li>
+                        </ol>
+                    </li>
+                    <li><a href="">Syncing and Dropping Models</a></li>
+                    <li><a href="">Finding items</a></li>
+                    <li><a href="">Creating and Updating items</a></li>
+                    <li><a href="">Aggregation</a></li>
+                    <li>
+                        <a href="">Development</a>
+                        <ol>
+                            <li><a href="">Testing</a></li>
+                            <li><a href="">Contributing</a></li>
+                        </ol>
+                    </li>
+                </ol>
+            </div>
+            <div>
+                <h2 id="Connection-to-Database">Connection to Database</h2>
+
+                <p>Before connecting, you will need a supported driver. Here's the drivers and versions that are tested,
+                    add the ones you need to your package.json.</p>
+                <table class="table col-md-4">
+                    <thead>
+                    <tr>
+                        <th>driver</th>
+                        <th>npm package</th>
+                        <th>version</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>mysql</td>
+                        <td>mysql</td>
+                        <td>2.0.0-alpha9</td>
+                    </tr>
+                    <tr>
+                        <td>postgres redshift</td>
+                        <td>pg</td>
+                        <td>2.6.2 <sup>[1]</sup></td>
+                    </tr>
+                    <tr>
+                        <td>sqlite</td>
+                        <td>sqlite3</td>
+                        <td>2.1.7</td>
+                    </tr>
+                    <tr>
+                        <td>mongodb</td>
+                        <td>mongodb</td>
+                        <td>1.3.19</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <p><sup>[1]</sup> If you're connecting to <strong>Heroku</strong>,use version <strong>2.5.0</strong></p>
+
+                <p>These are the versions tested,Use others (older or newer) at your own risk.</p>
+
+                <p>For example,to use mySQL just do:</p>
+                <pre> $ npm install --save mysql@2.0.0-alpha8</pre>
+                <p>To connect to a database,you can pass a URL string where the
+                    scheme is a supported driver or you can pass an <code>Object</code>
+                    with the parameters of the connection.</p>
+                <pre>
+var orm = require('orm');
+orm.connect('mysql://root:password@localhost/test',function(err,db){
+    if(err) return console.error('Connection error:' + err);
+
+    //connected
+    //...
+});
+                </pre>
+                <p>The callback is only called when the connection is done successfully
+                    (or unsuccessfully).</p>
+
+                <p>You can avoid passing a callback and listen for the <code>connect</code> even if you prefer.</p>
+                <pre>
+var orm = require('orm');
+var db = orm.connect('mysql://root:password@localhost/test');
+db.on('connect',function(err){
+    if(err) return console.error('Connection error: ' + error);
+    //connected
+    //...
+});
+                </pre>
+                <p>The connection URL has the following syntax:</p>
+                <pre>driver://username:password@hostname/database?option1=value1&option2=value2..</pre>
+                <p>Valid options are:</p>
+                <ul>
+                    <li><p><code>debug</code>(default:<strong>false</strong>):prints queries to console;</p></li>
+                    <li><p><code>pool</code>(default:<strong>false</strong>):manages a connection pool
+                            (only for <code>mysql</code> and <code>postgres</code> )
+                            using built-in driver pool;
+                        </p></li>
+                    <li><p><code>strdates</code>(default:<strong>false</strong>):saves dates as strings (only for
+                            <code>sqlite</code>).
+                        </p></li>
+                    <li><p><code>timezone</code>(default: <strong>'local'</strong>):store dates in the database using
+                            this timezone (<code>mysql</code> and <code>postgres</code> only)
+                        </p></li>
+                </ul>
+                <p>Both <code>debug</code> and <code>pool</code> can also be set using <a href="#Setting">Settings</a>.
+                </p>
+
+                <h2>Connecting to multiple databases</h2>
+
+                <p>ORM Models are bound to database connections, so if you need 'multi-tenancy', that is need to
+                    connect to different servers or databases, you can use something like this:</p>
+                <pre>
+//db.js
+var connections = {};
+function setup(db){
+    var User = db.define('user', ...);
+    var Shirt = db.define('shirt', ...);
+    Shirt.hasOne('user', User, ...);
+}
+
+module.exports = function(host, database, cb){
+    if(connections[host] && connections[host][database]){
+        return connections[host][database];
+    }
+    var opts = {
+        host: host,
+        database: database,
+        protocol: 'mysql',
+        port: '3306',
+        query: {pool: true}
+    };
+    orm.connect(opts, function(err, db){
+        if(err) return cb(err);
+
+        connections[host] = connections[host] || {};
+        connections[host] = db;
+        setup(db);
+        cb(null, db);
+    });
+};
+// somewhere else, eg, middleware
+var database = require('./db');
+database('dbserver1', 'main', function(err, db){
+    if(err) throw err;
+    db.models.user.find({foo: 'bar'}, function(err, rows){
+        // ...
+    });
+});
+                </pre>
+                <h2>Troubleshooting</h2>
+
+                <p>If you are getting this error when connecting to the mysql database:</p>
+                <pre>
+Error: connection ECONNERFUSED
+    at errnoException (net.js:670:11)
+    at Object.afterConnect [as oncomplete] (net.js:661:19)
+                </pre>
+                <p>then you could try to add <code>socketPath</code> parameter:</p>
+                <pre>
+var db = orm.connect({
+    host:   'localhost',
+    database:   'database',
+    user:   'user',
+    password:   'pass',
+    protocol:   'mysql',
+    socketPath: '/var/run/mysqld/mysqld.sock',
+    port:   '3306',
+    query: {pool:   true, debug:    true}
+});
+                </pre>
+            </div>
+            <div>
+                <h2 id="Settings">Setting</h2>
+
+                <p>Settings are used to store key value pairs. A settings object is instantiated on <code>orm</code>
+                    (default values), then a snapshot is created for every <code>db</code> connection and then a
+                    snapshot for each defined <code>Model</code> . So changes to <code>orm.settings</code> will take
+                    effect only to connections made after the change, and changes too <code>db.settings</code> will
+                    only effect models defined after the change.
+                </p>
+                <pre>
+var orm = require('orm');
+orm.settings.set("some.deep.value", 123);
+orm.connect("....", function(err, db){
+    //db.settings is a snapshot of the settings at the moment
+    //of orm.connect(). changes to it don't affect orm.settings
+
+    console.log(db.settings.get("some.deep.value"));// 123
+    console.log(db.settings.get("some.deep"));//{value:123}
+
+    db.settings.set("other.value", { some : "object"});
+
+    console.log(db.settings.get("other.value"));//{some:"object"}
+    console.log(orm.settings.get("other.value"));//undefined
+});
+                </pre>
+                <p>Here's the structure of the default settings:</p>
+                <pre>
+var Settings = {
+    properties : {
+        primary_key : "id",
+        association_key : "{name}_{field}",
+        required : false
+    },
+    instance : {
+        cache : true,
+        cacheSaveCheck : true,
+        autoSave : false,
+        autoFetch : false,
+        autoFetchLimit : 1,
+        cascadeRemove : true,
+        returnAllErrors : false
+    },
+    connection : {
+        reconnect : true,
+        pool : false,
+        debug : false
+    }
+};
+                </pre>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>Setting</th>
+                        <th>Description</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><code>properties.primary_key</code></td>
+                        <td>the property name for the primary key of models without an <code>id</code> defined</td>
+                    </tr>
+                    <tr>
+                        <td><code>properties.association_key</code></td>
+                        <td>the property name of an association key (example:"user_id")</td>
+                    </tr>
+                    <tr>
+                        <td><code>properties.required</code></td>
+                        <td>if the default behaviour of a property is to be required or not</td>
+                    </tr>
+                    <tr>
+                        <td><code>instance.cache</code></td>
+                        <td>if instances should be cached(not actually cache, this is about Singleton behaviour)</td>
+                    </tr>
+                    <tr>
+                        <td><code>instance.cacheSaveCheck</code></td>
+                        <td>if instances should be returned from cache if the cached instance is saved or not(don't
+                            change this unless you know what you're doing)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><code>instance.autoSave</code></td>
+                        <td>if activated, makes instances save instantly when any property is changed</td>
+                    </tr>
+                    <tr>
+                        <td><code>instance.autoFetch</code></td>
+                        <td>if associations should be fetched automatically or not</td>
+                    </tr>
+                    <tr>
+                        <td><code>instance.autoFetchLimit</code></td>
+                        <td>if <code>autoFetch</code> is activated, is the depth of associations it should fetch</td>
+                    </tr>
+                    <tr>
+                        <td><code>instance.cascadeRemove</code></td>
+                        <td>removes associations when removing
+                            instances
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><code>instance.returnAllErrors</code></td>
+                        <td>if activated, instance saving will
+                            hold all errors and return them as an <code>array</code> instead of returning on
+                            first error
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><code>connection.reconnect</code></td>
+                        <td>try to reconnect when connection is lost</td>
+                    </tr>
+                    <tr>
+                        <td><code>connection.pool</code></td>
+                        <td>use the driver connection pool (if supported)</td>
+                    </tr>
+                    <tr>
+                        <td><code>connection.debug</code></td>
+                        <td>print coloured queries to
+                            <code>stdout</code></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div>
+                <h2 id="Defining-Models">Defining Models</h2>
+
+                <p>After <a href="#Connection-to-Database">connecting</a>, you can use the connection object( db ) to
+                    define your models.
+                    You need to
+                    specify the name of the model, a specification of the properties and options(optional). Here's a
+                    small example:
+                </p>
+                <pre>
+var Person = db.define('person', {
+    id : {type: 'serial', key: true}, // the auto-incrementing primary key
+    name: {type: 'text'},
+    surname: {type: 'text'},
+    age: {type : 'number'}
+},{
+    methods : {
+        fullName:function(){
+            return this.name + ' ' + this.surname;
+        }
+    }
+});
+                </pre>
+                <p>The model called <code>person</code> (which is usually the name of the table in the database), it
+                    has 3 properties (name and surname as text and age as number). A default
+                    <code>id:{type:'serial', key:true}</code> property is added if you don't specify any keys
+                    yourself. In the example there is a model method <code>fullName</code>. Here's an example of the
+                    usage of this model:
+                </p>
+                <pre>
+Person.get(73, function(err, person){
+    if(err) throw err;
+    console.log('Hi, my name is ' + person.fullName());
+});
+                </pre>
+                <p>This would get person with <code>id=73</code> and print it's name and surname. There are other
+                    types of <a href="">properties available</a> .</p>
+
+                <h2>API</h2>
+                <pre>
+/**
+ *@param {Object} props Property definitions
+ *@param {Object} opts Options
+ */
+db.define(props, opts)
+                </pre>
+                <p>
+                    The first object accepted by <code>db.define()</code> is referred to as the properties object. It
+                    defines all the <a href="">properties</a>.
+                </p>
+
+                <p>The second specifies extra options:</p>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>option name</th>
+                        <th>type</th>
+                        <th>description</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>collection</td>
+                        <td>String</td>
+                        <td>Lets you overwrite the table name in the database.</td>
+                    </tr>
+                    <tr>
+                        <td>methods</td>
+                        <td>Object</td>
+                        <td>Extra methods to create on model instances, Called with <code>this</code> set to the
+                            instance.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>hooks</td>
+                        <td>Object</td>
+                        <td>User defined <a href="">hooks/callback</a>.</td>
+                    </tr>
+                    <tr>
+                        <td>validations</td>
+                        <td>Object</td>
+                        <td>User defined <a href="">validations</a></td>
+                    </tr>
+                    <tr>
+                        <td>id</td>
+                        <td>Array</td>
+                        <td>Deprecated in favour of setting <code>key: true</code> on properties.</td>
+                    </tr>
+                    <tr>
+                        <td>cache</td>
+                        <td>Boolean</td>
+                        <td>Allows you to disable/enable singleton behaviour. It's called <code>cache</code> but
+                            it's not cache.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>autoSave</td>
+                        <td>Boolean</td>
+                        <td>Not recommended, Saves model automatically when a property is changed.</td>
+                    </tr>
+                    <tr>
+                        <td>autoFetch</td>
+                        <td>Boolean</td>
+                        <td>?</td>
+                    </tr>
+                    <tr>
+                        <td>autoFetchLimit</td>
+                        <td>Number</td>
+                        <td>How many levels deep to autofetch</td>
+                    </tr>
+                    <tr>
+                        <td>cascadeRemove</td>
+                        <td>Boolean</td>
+                        <td>?</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div>
+                <h2 id="Model-Properties">Model Properties</h2>
+
+                <p>Models and some associations can have one more properties. Every property has a type and a couple
+                    of optional settings you can choose(or leave the default).
+                </p>
+
+                <h3>Types</h3>
+
+                <p>The supported types are:</p>
+                <ul>
+                    <li><code>text</code>:A text string.</li>
+                    <li><code>number</code>:A floating point number. You can specify <code>size: 2|4|8</code>.</li>
+                    <li><code>integer</code>:An integer. You can specify <code>size: 2|4|8</code>.</li>
+                    <li><code>boolean</code>:A true/false value.</li>
+                    <li><code>date</code>:A date object. You can specify <code>time: true</code>.</li>
+                    <li><code>enum</code>:A value from a list possible values.</li>
+                    <li><code>object</code>:A JSON object.</li>
+                    <li><code>point</code>:A N-dimensional point (not generally supported).</li>
+                    <li><code>binary</code>:Binary data.</li>
+                    <li><code>serial</code>:Auto-incrementing integer. Used for primary keys.</li>
+                </ul>
+                <p>Each type can have additional options. Here's a model definition using most of them:</p>
+                <pre>
+var Person = db.define("person", {
+    name: {type:"text", size: 50 },
+    surname: {type:"text", defaultValue: "Doe" },
+    male: {type: "boolean"},
+    vat: {type:"integer",unique: true},
+    country: {type:"enum", values:["USA", "Canada", "Rest of the World"]},
+    birth: {type:"date", time: false }
+});
+                </pre>
+                <p>All types support <code>required</code> (boolean), <code>unique</code> (boolean) and
+                    <code>defaultValue</code> (text). Text type also supports maximum <code>size</code> of string
+                    (number) and big (boolean - for very long strings). Number type is float, <code>size</code>
+                    (number - byte size) and <code>unsigned</code> (boolean). Date type supports <code>time</code>
+                    (boolean).</p>
+                <strong>Note that 8 byte numbers <a href="">have limitations</a>.</strong>
+
+                <p>If you're using default options, you can use native types to specify property types:</p>
+                <pre>
+var Person = db.define("person", {
+    name: String,
+    male: Boolean,
+    vat : Number, // FLOAT
+    birth: Date,
+    country: ["USA", "Canada", "Rest of the World"],
+    meta : Object, //JSON
+    photo : Buffer //binary
+});
+                </pre>
+                <h3>Mapping ORM fields to differently named database columns</h3>
+                <pre>
+var Person = db.define("person", {
+    name : {type: 'text', mapsTo:'fullname'}
+});
+                </pre>
+                <p>ORM property <code>name</code> maps to person table column <code>fullname</code>.</p>
+
+                <h3>Custom types</h3>
+
+                <p>You can add your own types to ORM like so:</p>
+                <pre>
+db.defineType('numberArray', {
+    datastoreType: function(prop){
+        return 'TEXT';
+    },
+    //This is optional
+    valueToProperty: function(value, prop){
+        if(Array.isArray(value)){
+            return value;
+        } else {
+            return value.split(',').map(function(v){
+                return Number(v);
+            });
+        }
+    },
+    //This is also optional
+    propertyToValue: function(value, prop){
+        return value.join(',');
+    }
+});
+var LottoTicket = db.define("lotto_ticket", {
+    numbers: {type: 'numberArray'}
+});
+                </pre>
+                <p>There are more advanced custom types available to aid in using things like PostGIS. See <a
+                            href="">this spec</a>.</p>
+            </div>
+            <div>
+                <h2 id="Model-Validations">Model Validations</h2>
+
+                <p>The module <a href="">Enforce</a> is used for validations. For people using previous validators,
+                    they're still present, some as links to enforce, others not. We advise you to start using
+                    <code>orm.enforce</code> instead of <code>orm.validators</code>. For a list of possible
+                    validations, consult the <a href="">module</a>.</p>
+
+                <p>There's also a <code>unique</code> validator built into ORM accessible via:</p>
+                <pre>
+name: orm.enforce.unique("name already taken!");
+name: orm.enforce.unique({ scope:['age']}, "Sorry, name already taken for this age group");
+name: orm.enforce.unique({ignoreCase: true})//'John' is same as 'john'(mysql is case insensitive by default)
+                </pre>
+                <p>You can define validations for every property of a Model. You can have one or more validations
+                    for each property. You can also use the predefined validations or create your own.</p>
+                <pre>
+var Person = db.define("person", {
+    name: String,
+    age: Number
+},{
+    validations: {
+        name: orm.enforce.ranges.length(1, undefined, "missing"),//"missing" is name given to this validation,
+                    instead of default
+        age: [orm.enforce.ranges.number(0,10), orm.enforce.lists.inside([1, 3, 5, 7, 9])]
+    }
+});
+                </pre>
+                <p>The code above defines that the <code>name</code> length must be between 1 and undefined
+                    (undefined means any) and <code>age</code> must be a number between 0 and 10(inclusive) but also
+                    one of the listed values. The example might not make sense but you get the point.
+                </p>
+
+                <p>When saving an item, if it fails to validate any of the defined validations you'll get an
+                    <code>error</code> object with the property name and validation error description. This
+                    description should help you identify what happend.</p>
+                <pre>
+var John = new Person({
+    name : "",
+    age : 20
+});
+John.save(function(err){
+    //err.field = "name", err.value = "", err.msg = "missing"
+});
+                </pre>
+                <p>The validation stops after the first validation error. If you want it to validate every property
+                    and return all validation errors, you can change this behavior on global or local settings:</p>
+                <pre>
+var orm = require('orm');
+orm.settings.set("instance.returnAllErrors", true);// global or ..
+orm.connect("....", function(err, db){
+    db.settings.set("instance.returnAllErrors", true);// .. local
+    // ...
+    var John = new Person({
+        name: "",
+        age: 15
+    });
+    John.save(function(err){
+        assert(Array.isArray(err));
+        //err[0].property = "name", err[0].value = "", err[0].msg = "missing"
+        //err[1].property = "age", err[1].value = 15, err[1].msg  = "out-of-range-number"
+        //err[2].property = "age", err[1].value = 15,err[1].msg = "outside-list"
+    });
+});
+                </pre>
+            </div>
+            <div>
+                <h2 id="Model-Hooks">Model Hooks</h2>
+
+                <p>If you want to listen for a type of event than occurs in instances of a Model, you can attach a
+                    function that will be called when that event happens.</p>
+
+                <p>Currently the following events are supported:</p>
+                <ul>
+                    <li><code>afterLoad</code>:(no parameters)Right after loading and preparing an instance to be
+                        used.
+                    </li>
+                    <li><code>afterAutoFetch</code>:(no parameters)Right after auto-fetching associations(if any),
+                        it will trigger regardless of having associations or not.
+                    </li>
+                    <li><code>beforeSave</code>:(no parameters)Right before trying to save.</li>
+                    <li><code>afterSave</code>:(bool success)Right after saving.</li>
+                    <li><code>beforeCreate</code>:(no parameters)Right before trying to save a new instance(prior to
+                        <code>beforeSave</code>)
+                    </li>
+                    <li><code>afterCreate</code>:(bool success)Right after saving a new instance.</li>
+                    <li><code>beforeRemove</code>:(no parameters)Right before trying to remove an instance.</li>
+                    <li><code>afterRemove</code>:(bool success)Right after removing an instance.</li>
+                    <li><code>beforeValidation</code>:(no parameters)Before all validations and prior to
+                        <code>beforeCreate</code> and <code>beforeSave</code>.
+                    </li>
+                </ul>
+                <p>All hook function are called with <code>this</code> as the instance so you can access anything
+                    you want related to it.</p>
+
+                <p>For all <code>before*</code> hooks, you can add an additional parameter to the hook function.
+                    This parameter will be a function that must be called to tell if the hook allows the exception
+                    to continue or to break. You might be familiar with this workflow already from Express. Here's
+                    an example:</p>
+                <pre>
+var Person = db.define("person",{
+    name: String,
+    surname: String
+},{
+    hooks: {
+        beforeCreate:function(next){
+            if(this.surname == "Doe"){
+                return next(new Error("No Does allowed"));
+            }
+            return next();
+        }
+    }
+});
+                </pre>
+                <p>This workflow allows you to make asynchronous work before calling <code>next</code>. If you're
+                    not going to use <code>next</code> don't define it as an argument. otherwise the workflow will
+                    block.</p>
+
+                <h3>Common Mistakes</h3>
+
+                <p>A common issue that people have involves accessing <code>this</code> from nested callbacks within
+                    a hook. The reason for this problem is that the <code>this</code> object is only valid within the
+                    scope of the top-most hook function, callbacks will have a different value. To correct the issue,
+                    create a variable to store a reference to <code>this</code> and use that variable to access the
+                    model's properties within callbacks.
+                </p>
+
+                <p><strong>Example</strong></p>
+                <pre>
+var Person = db.define("person", {
+    name    : String,
+    surname : String
+}, {
+    hooks: {
+        beforeCreate: function (next) {
+            var _this = this;
+            checkName(this, function(err, result)) {
+                if(err) return next(err);
+                _this.name = result.name;
+                _this.surname = result.surname;
+                next();
+            }
+        }
+    }
+});
+                </pre>
+            </div>
+            <div>
+                <h2 id="Model-cache">Model cache</h2>
+            </div>
+            <div>
+                <h2 id="Defining-Associations">Defining Associations</h2>
+
+                <p>An association is a relation between one or more <a href="">models</a>.</p>
+
+                <p>Types of associations:</p>
+                <ul>
+                    <li><a href="">hasOne</a></li>
+                    <li><a href="">hasMany</a></li>
+                    <li><a href="">extendsTo</a></li>
+                </ul>
+            </div>
+            <div>
+                <h2 id="hasOne">hasOne</h2>
+
+                <p>A hasOne association is a many-to-one relationship, which means that a model you define can have
+                    several instances pointing to one other instance( from the same model or another model).</p>
+
+                <h3>Usage</h3>
+                <pre>
+Animal.hasOne(association_name [, association_model [, options]]);
+                </pre>
+                <h3>Description</h3>
+                <ul>
+                    <li><code>association_name</code> is the relationship name between the two models.</li>
+                    <li><code>association_model</code> is the other model to relate with(if not defined, it assumes
+                        the same model, which in most cases is not what you want).
+                    </li>
+                    <li><code>options</code> is an object with several things you can tweak about the association,
+                        like for example automatic fetching or even table name(in case of SQL) or collection(in case
+                        of MongoDB).
+                    </li>
+                </ul>
+                <h3>Example</h3>
+                <pre>
+Animal.hasOne("owner", Person);
+                </pre>
+                <p>In the backstage, what this means is that <code>Animal</code> collection will have a property
+                    <code>owner_id</code> (this name can be changed in the options, <code>{field: 'ownerid'}</code>)
+                    that will point the someone in the <code>Person</code> collection. If can be empty if the
+                    association is not required.
+                </p>
+
+                <p>This association also creates some additional convenience methods(called association accessors)
+                    to help managing this association. The accessor names can be changed (again.. in the options),
+                    and by default they assume similar names based on the association name. For instance, looking at
+                    the above example you can do something like this:
+                    <pre>
+// assuming John is a Person..
+Animal.find({ name: "Deco" }).first(function (err, Deco) {
+    Deco.setOwner(John, function (err) {
+        // John is now the owner of Deco
+    });
+});
+                    </pre>
+                </p>
+                <p>
+                    There are more accessors:
+                <ul>
+                    <li><code>getOwner(callback)</code>-get the associated owner.</li>
+                    <li><code>hasOwner(callback)</code>-return(in the callback)if the animal has an owner or not</li>
+                    <li><code>removeOwner(callback)</code>-remove association with owner(if exists).</li>
+                </ul>
+                </p>
+                <h3>Reverse Association</h3>
+
+                <p>Sometimes you want to be able to access an association from the opposite model. In the case of
+                    the example above, from the <code>Person</code>. You can do this by passing an option to the
+                    association.
+                    <pre>
+Animal.hasOne('owner',Person,{reverse:"pets"});
+                </pre>
+                After this, every person has now 2 convenience methods:
+                <ul>
+                    <li><code>getPets(callback)</code>-get all animals associated with the person.</li>
+                    <li><code>setPets(cat,dog,callback)</code>-clear all animals associated with the person and
+                        then add cat and dog.
+                    </li>
+                </ul>
+                </p>
+
+            </div>
+            <div>
+                <h2 id="hasMany">hasMany</h2>
+
+                <h3>hasMany</h3>
+
+                <p>
+                    Is a <strong>many to many</strong> relationship(includes join table).
+
+                <p>Eg: <code>Patient.hasMany('doctors',Doctor,{why:String},{reverse:'patients',key:true})
+                    </code>.</p>
+
+                <p>
+                    Patient can have many different doctors,Each doctor can have many different patients.
+                </p>
+                </p>
+                <p>
+                    This will created a join table <code>patient_doctors</code> when you call <code>Patient.sync()
+                    </code>:
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>column name</th>
+                        <th>type</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>patient_id</td>
+                        <td>Integer</td>
+                    </tr>
+                    <tr>
+                        <td>doctor_id</td>
+                        <td>Integer</td>
+                    </tr>
+                    <tr>
+                        <td>why</td>
+                        <td>varchar(255)</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <p>The following functions will be available:</p>
+                <pre>
+// Get the list of associated doctors
+patient.getDoctors(function(err, doctors) {
+  // ...
+});
+
+// Add entries to the join table
+patient.addDoctors([phil, bob], function(err) {
+  // ...
+});
+
+// Remove existing entries in join table and add new ones
+patient.setDoctors([phil, nephewOfBob], function(err) {
+  // ...
+});
+
+// Checks if patient is associated to specified doctors
+patient.hasDoctors([bob], function(err, patientHasBobAsADoctor) {
+  // because that is a totally legit and descriptive variable name
+  if (patientHasBobAsADoctor) {
+    // ...
+  } else {
+    // ...
+  }
+});
+
+// Remove specific entries from the join table
+patient.removeDoctors([bob], function(err) {
+  // ...
+});
+
+// And all of the doctor's have their own methods for selecting patients!
+bob.getPatients(function(err, patients) {
+  if (patients.indexOf(you) !== -1) {
+    // woot!
+  } else {
+    // ...
+  }
+});
+
+// and so on and so forth
+                    </pre>
+
+                <p>To associate a doctor to a patient:</p>
+<pre>
+patient.addDoctor(surgeon, {why: 'remove appendix'}, function(err) {
+  // ...
+});
+
+// or...
+surgeon.addPatient(patient, {why: 'remove appendix'}, function(err) {
+  // ...
+});
+                </pre>
+                <p>Which will add <code>{patient_id: 4,doctor_id: 6, why: "remove appendix"}</code> to the join
+                    table.</p>
+                </p>
+                <h3>API</h3>
+                <pre>
+Model.hasMany(
+    name,//String. Association name
+    otherModel,//Model. The model we're association to
+    extraProps,//Object. Extra properties that will appear on the join table
+    opts       //Object. Options for the association
+);
+                </pre>
+                <h4>opts</h4>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>option name</th>
+                        <th>type</th>
+                        <th>description</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>autoFetch</td>
+                        <td>Boolean</td>
+                        <td>Default:false. If true, association will be automatically fetched with parent.</td>
+                    </tr>
+                    <tr>
+                        <td>autoFetchLimit</td>
+                        <td>Number</td>
+                        <td>Default:1. How many levels deep to auto fetch.</td>
+                    </tr>
+                    <tr>
+                        <td>key</td>
+                        <td>Boolean</td>
+                        <td>Default:false(for historical reasons). If true, foreign key columns in the table will
+                            form a composite key.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>mergeTable</td>
+                        <td>String</td>
+                        <td>Custom name for the merge table</td>
+                    </tr>
+                    <tr>
+                        <td>mergeId</td>
+                        <td>String</td>
+                        <td>Custom name for column referencing this model</td>
+                    </tr>
+                    <tr>
+                        <td>mergeAssocId</td>
+                        <td>String</td>
+                        <td>Custom name for column referencing other model</td>
+                    </tr>
+                    <tr>
+                        <td>reverse</td>
+                        <td>String</td>
+                        <td>Default:false. If true, association will be accessible from the other model with the
+                            specified name.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>getAccessor</td>
+                        <td>String</td>
+                        <td>Default: 'get' + Name. Allows overwriting associating accessor.</td>
+                    </tr>
+                    <tr>
+                        <td>setAccessor</td>
+                        <td>String</td>
+                        <td>Default: 'set' + Name. Allows overwriting associating accessor.</td>
+                    </tr>
+                    <tr>
+                        <td>hasAccessor</td>
+                        <td>String</td>
+                        <td>Default: 'has' + Name. Allows overwriting associating accessor.</td>
+                    </tr>
+                    <tr>
+                        <td>delAccessor</td>
+                        <td>String</td>
+                        <td>Default: 'del' + Name. Allows overwriting associating accessor.</td>
+                    </tr>
+                    <tr>
+                        <td>addAccessor</td>
+                        <td>String</td>
+                        <td>Default: 'add' + Name. Allows overwriting associating accessor.</td>
+                    </tr>
+
+                    </tbody>
+                </table>
+            </div>
+            <div>
+                <h2 id="extendsTo">extendsTo</h2>
+
+                <p>
+                    If you want to split maybe optional properties into different tables or collections. Every
+                    extension will be in a new table, where the unique identifier of each row is the main model
+                    instance id. For example:
+                    <pre>
+var Person = db.define("person", {
+    name : String
+});
+var PersonAddress = Person.extendsTo("address", {
+    street : String,
+    number : Number
+});
+                </pre>
+                </p>
+                <p>
+                    This will create a table <code>person</code> with columns <code>id</code> and <code>name</code>.
+                    The extension will create a table <code>person_address</code> with columns
+                    <code>person_id</code>,<code>street</code> and <code>number</code>. The methods available in the
+                    <code>Person</code> model are similar to an <code>hasOne</code> association. In this example you
+                    would be able to call <code>.getAddress(cb)</code>, <code>.setAddress(Address, cb)</code>,..
+                </p>
+
+                <p>
+                    <strong>Note:</strong>you don't have to save the result from <code>Person.extendsTo</code>. It
+                    returns an extended model. You can use it to query directly this extended table(and even find the
+                    related model) but that's up to you. If you only want to access it using the original model you
+                    can just discard the return.
+                </p>
+            </div>
+            <div>
+                <h2 id="Syncing-and-dropping-models">Syncing and dropping models</h2>
+
+                <p>
+                    Syncing is an utility method that creates all the necessary tables in the database for your
+                    models and associations to work. Tables are not replaced, they are only created if they don't exist.
+                </p>
+
+                <p>
+                    There are 2 ways of syncing:
+                <ol>
+                    <li>Calling <code>Model.sync(cb)</code> will only synchronize the model.</li>
+                    <li>Calling <code>db.sync(cb)</code> will synchronize all models.</li>
+                </ol>
+                </p>
+                <p>Dropping is a similar method but instead it drops all tables involved in your models, even if
+                    they were not created by ORM. There also 2 ways of dropping.
+                    <pre>
+var orm = require("orm");
+
+orm.connect("....", function (err, db) {
+    var Person = db.define("person", {
+        name : String
+    });
+    var Pet = db.define("pet", {
+        name : String
+    });
+
+    db.drop(function () {
+        // dropped all tables from defined models (Person and Pet)
+
+        Person.sync(function () {
+            // created tables for Person model
+        });
+    });
+});
+                </pre>
+                </p>
+            </div>
+            <div>
+                <h2 id="Finding-items">Finding items</h2>
+
+                <h3>find</h3>
+
+                <p>Find records with matching criteria, can be chained(see below):
+                <pre>
+Person.find({status:'active'}, function(err, results) {
+  // ...
+});
+                </pre>
+                </p>
+                <p>
+                    You can limit your results as well. This limits our results to 10:
+                    <pre>
+Person.find({status:'active'}, 10, function(err, results) {
+  // ...
+});
+                </pre>
+                <code>Person.all</code> is an alias to <code>Person.find</code>.
+                </p>
+                <h3>get</h3>
+
+                <p>
+                    Find record by primary key.
+                    <pre>
+Person.get(1, function(err, person) {
+  // ...
+});
+                </pre>
+                </p>
+                <h3>one</h3>
+
+                <p>
+                    Find one record with similar syntax to find.
+                    <pre>
+Person.one({status:'active'}, function(err, person) {
+  // ...
+});
+                </pre>
+                </p>
+                <h3>count</h3>
+
+                <p>
+                    Get the number of matching records.
+                    <pre>
+Person.count({status:'active'}, function(err, activePeopleCount) {
+  // ...
+});
+                </pre>
+                </p>
+                <h3>exists</h3>
+
+                <p>
+                    Test a record matching your conditions exists.
+                    <pre>
+Person.exists({id:1, status:'active'}, function(err, personIsActive) {
+  // ...
+});
+                </pre>
+                </p>
+                <h3>Filtering and sorting</h3>
+
+                <p>
+                    We accept 2 objects to perform filtering(first) and aggregate(second).The aggregate object
+                    accepts <code>limit</code>,<code>order</code>,<code>groupBy</code>.
+
+                <p><a href="">https://github.com/dresende/node-orm2/blob/v2.1.20/lib/AggregateFunctions.js#L36</a></p>
+                    <pre>
+Person.find({status:'active'}, {limit:10}, function(err, res) {
+  // res is Person where col1 == 1 or col2 == 2
+});
+                    </pre>
+                </p>
+                <h3>Conditions for find/count/one etc</h3>
+
+                <p>
+                    All comma seperated key/values are AND'd together in the query. You may prefix a set of
+                    conditions with logical operators.
+                    <pre>
+Person.find({or:[{col1: 1}, {col2: 2}]}, function(err, res) {
+  // res is Person where col1 == 1 or col2 == 2
+});
+                </pre>
+                </p>
+                <h3>Finding with an <code>IN</code></h3>
+
+                <p>
+                    <code>sql-query</code>(underlying SQL engine) will automatically coerce any array to an
+                    <code>IN</code> based query.
+
+                <p><a href="">https://github.com/dresende/node-sql-query/blob/v0.1.23/lib/Where.js#L172</a></p>
+                <pre>
+Person.find({id: [1, 2]}, function(err, persons) {
+  // Finds people with id's 1 and 2 (e.g. `WHERE id IN (1, 2)`)
+});
+                </pre>
+                </p>
+            </div>
+            <div>
+                <h2 id="Creating-and-Updating-Items">Creating and Updating Items</h2>
+
+                <h3>create</h3>
+                <pre>
+var newRecord = {};
+newRecord.id = 1;
+newRecord.name = "John"
+Person.create(newRecord, function(err, results) {
+ ...
+});
+                </pre>
+                <h3>save</h3>
+                <pre>
+Person.find({ surname: "Doe" }, function (err, people) {
+    // SQL: "SELECT * FROM person WHERE surname = 'Doe'"
+
+    console.log("People found: %d", people.length);
+    console.log("First person: %s, age %d", people[0].fullName(), people[0].age);
+
+    people[0].age = 16;
+    people[0].save(function (err) {
+        // err.msg = "under-age";
+    });
+});
+                </pre>
+            </div>
+            <div>
+                <h2 id="Aggregation">Aggregation</h2>
+
+                <p>If you need to get some aggregated values from a Model, you can use <code>Model.aggreage()</code>.
+                    Here's an example to better illustrate:
+                    <pre>
+Person.aggregate({ surname: "Doe" }).min("age").max("age").get(function (err, min, max) {
+    console.log("The youngest Doe guy has %d years, while the oldest is %d", min, max);
+});
+                </pre>
+                </p>
+                <p>
+                    An <code>Array</code> of properties can be passed to select only a few properties. An
+                    <code>Object</code> is also accepted to define conditions.
+
+                <p>Here's an example to illustrate how to use <code>.groupBy()</code>:</p>
+                <pre>
+//The same as "select avg(weight), age from person where country='someCountry' group by age;"
+Person.aggregate(["age"], { country: "someCountry" }).avg("weight").groupBy("age").get(function (err, stats) {
+    // stats is an Array, each item should have 'age' and 'avg_weight'
+});
+                </pre>
+                </p>
+                <h3>Base <code>.aggregate()</code> methods</h3>
+                <ul>
+                    <li><code>.limit()</code>: you can pass a number as a limit, or two numbers as offset and limit
+                        respectively.
+                    </li>
+                    <li><code>.order()</code>: same as <code>Model.find().order()</code></li>
+                </ul>
+                <h3>Additional <code>.aggregate()</code> methods</h3>
+                <ul>
+                    <li><code>min</code></li>
+                    <li><code>max</code></li>
+                    <li><code>avg</code></li>
+                    <li><code>sum</code></li>
+                    <li><code>count</code>(there's a shortcut to this - <code>Model.count</code>)</li>
+                </ul>
+                <p>There are more aggregate functions depending on the driver (Math functions for example).</p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>

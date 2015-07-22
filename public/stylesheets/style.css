@@ -1,0 +1,17 @@
+html {
+    height: 100%;
+}
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Microsoft Yahei, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;
+    height: 100%;
+}
+
+body > .container, .container-fluid {
+    padding-top: 20px;
+}
+
+body, input, textarea, button, legend {
+    font-family: Lucida Grande,Helvetica,Arial,Verdana,sans-serif;
+    color: #333;
+}

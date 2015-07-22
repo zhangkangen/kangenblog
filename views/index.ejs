@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <meta name="baidu-site-verification" content="wyeIf1QyY7"/>
+    <!--百度统计-->
+    <% include template/header %>
+    <style>
+        #main{
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+<!--导航-->
+<% include template/nav.ejs %>
+<div class="container" id="main">
+    <div class="row">
+        <h1><%= title %></h1>
+
+        <p>Welcome to <%= title %></p>
+
+        <P>这里是张小康的博客，正在开发中。。。</P>
+
+        <H2>请移步：<a href="http://blog.csdn.net/zhangkangen">张小康的CSDN博客</a></H2>
+    </div>
+</div>
+<%include template/footer.ejs%>
+</body>
+</html>
