@@ -111,7 +111,7 @@ var schedule = {
 var t = later.setInterval(task, schedule);
 
 var guokrTask = require('./common/guokrTask');
-var composite2 = [{h: [2], m: [0]}];
+var composite2 = [{h: [2], m: [0]},{h:[14],m:[0]}];
 var schedule2 = {
     schedules: composite2
 };
