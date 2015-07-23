@@ -3,6 +3,7 @@
  */
 var db = require('./db');
 
+//Article 实体类
 var Article = db.define('article', {
     id: {type: 'serial', key: true},
     title: {type: 'text'},

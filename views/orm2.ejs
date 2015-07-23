@@ -3,14 +3,22 @@
 <head>
     <title><%= title %></title>
     <% include template/header.ejs %>
+    <style>
+        #left {
+            overflow: auto;
+        }
+        #right{
+            border-left: 1px solid #e3e3e3;
+        }
+    </style>
 </head>
 <body>
 <% include template/nav.ejs %>
 <div class="container">
     <div class="row">
-        <div class="col-md-3">
+        <div id="left" class="col-md-3">
             <nav class="hidden-print hidden-xs hidden-sm ">
-                <ol class="nav list-group" data-spy="affix">
+                <ol data-spy="affix">
                     <li><a href="#Connection-to-Database">Connection to Database</a></li>
                     <li><a href="#Settings">Settings</a></li>
                     <li>
@@ -44,7 +52,7 @@
                 </ol>
             </nav>
         </div>
-        <div class="col-md-9">
+        <div id="right" class="col-md-9">
             <div id="home">
                 <ol>
                     <li><a href="#Connection-to-Database">Connection to Database</a></li>
@@ -80,7 +88,7 @@
                 </ol>
             </div>
             <div>
-                <h2 id="Connection-to-Database">Connection to Database</h2>
+                <h2 class="page-header" id="Connection-to-Database">Connection to Database</h2>
 
                 <p>Before connecting, you will need a supported driver. Here's the drivers and versions that are tested,
                     add the ones you need to your package.json.</p>
