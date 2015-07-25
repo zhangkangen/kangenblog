@@ -43,7 +43,7 @@
 
  router.get('/', function (req, res, next) {
     Guokr.findAll({
-        limit:10,
+        limit:12,
         order:'id desc',
         attributes:['id','title','img']
     }).then(function(results){
