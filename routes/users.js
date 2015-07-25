@@ -6,15 +6,15 @@ var router = express.Router();
 
 /* GET users listing. */
 router.get('/', function (req, res, next) {
-    res.send('respond with a resource');
+    next();
 });
 /*这是登录页面*/
 router.get('/login', function (req, res, next) {
-    res.render('login', {title: '登录'});
+    res.render('user/login', {title: '登录'});
 });
 
 router.get('/reg', function (req, res, next) {
-    res.render('reg', {title: '注册'});
+    res.render('user/reg', {title: '注册'});
 });
 router.get('/logout', function (req, res, next) {
     if (req.session.user) {

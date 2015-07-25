@@ -23,41 +23,39 @@
     </style>
 </head>
 <body>
-<%include ../template/nav.ejs%>
-<div class="container">
-    <div class="row">
-        <div class="col-md-8" id="content">
-            <% if(article){ %>
-            <input type="hidden" value="<%= article.id %>">
-
-            <h2><%= article.title %></h2>
-
-            <h3> <%= article.author %></h3>
-            <hr/>
-            <%- article.content %>
-            <p><%-article.copyright%></p>
-            <% } %>
-        </div>
-
-        <div class="col-md-4" id="list">
-            <% if(list.length){ %>
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h3 class="panel-title">最新文章</h3>
-                </div>
-                <div class="panel-body list-group">
-                    <% list.forEach(function(item){ %>
-                    <% if(article && item.id == article.id){ %>
-                    <a class="list-group-item active" href="/one/<%= item.id %>"><%= item.title %></a>
-                    <% }else{ %>
-                    <a class="list-group-item" href="/guokr/<%= item.id %>"><%= item.title %></a>
-                    <% } %>
-                    <% });} %>
-                </div>
+    <%include ../template/nav.ejs%>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8" id="content">
+                <% if(article){ %>
+                <input type="hidden" value="<%= article.id %>">
+                <h2><%= article.title %></h2>
+                <h3> <%= article.author %></h3>
+                <hr/>
+                <%- article.content %>
+                <p><%-article.copyright%></p>
+                <% } %>
             </div>
 
+            <div class="col-md-4" id="list">
+                <% if(list.length){ %>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">最新文章</h3>
+                    </div>
+                    <div class="panel-body list-group">
+                        <% list.forEach(function(item){ %>
+                        <% if(article && item.id == article.id){ %>
+                        <a class="list-group-item active" href="/one/<%= item.id %>"><%= item.title %></a>
+                        <% }else{ %>
+                        <a class="list-group-item" href="/guokr/<%= item.id %>"><%= item.title %></a>
+                        <% } %>
+                        <% });} %>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </div>
-</div>
 </body>
 </html>

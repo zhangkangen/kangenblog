@@ -1,7 +1,8 @@
 /**
  * Created by 小康 on 2015/7/19.
  */
-var orm = require('orm');
+
+ var Sequelize = require('sequelize');
 var opts = {
     database: "kangblog",
     protocol: "mysql",
@@ -28,8 +29,24 @@ var optsBae = {
     },
 }
 
-var db = orm.connect(opts, function (err, db) {
-    if (err)  throw err;
+// var db = orm.connect(opts, function (err, db) {
+//     if (err)  throw err;
 
+// });
+
+var db = new Sequelize('kangblog','root','1234');
+var User = db.define('User',{
+    username: Sequelize.STRING,
+    birthday:Sequelize.DATE
+});
+db.sync().then(function(){
+    return User.create({
+        username:'janedoe',
+        birthday:new Date(1980,6,20)
+    });
+}).then(function(jane){
+    console.log(jane.get({
+        plain:true
+    }))
 });
 module.exports = db;

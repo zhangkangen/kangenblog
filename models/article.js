@@ -1,7 +1,8 @@
 /**
  * Created by 小康 on 2015/7/19.
  */
-var db = require('./db');
+ var db = require('./db');
+ var User = require('./user');
 
 //Article 实体类
 var Article = db.define('article', {
@@ -21,17 +22,5 @@ var Article = db.define('article', {
     }
 });
 
-Article.prototype.getHref = function (callback) {
-    db.models.article.one({href: this.href}, function (err, result) {
-        if (err) callback(err);
-        callback(err, result);
-    });
-}
-
-Article.prototype.save = function (callback) {
-    db.models.article.create(this, function (err, result) {
-        callback(err, result);
-    });
-}
 
 module.exports = Article;

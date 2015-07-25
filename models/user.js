@@ -8,14 +8,4 @@ var User = db.define('user', {
     username: {type: 'text'},
     password: {type: 'text'}
 });
-
-User.prototype.save = function (callback) {
-    var user = {
-        name: this.name,
-        password: this.password
-    };
-};
-User.get = function get(name, callback) {
-
-};
 module.exports = User;

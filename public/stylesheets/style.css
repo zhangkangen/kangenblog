@@ -15,3 +15,6 @@ body, input, textarea, button, legend {
     font-family: Lucida Grande,Helvetica,Arial,Verdana,sans-serif;
     color: #333;
 }
+.navbar{
+	border-radius:0;
+}
