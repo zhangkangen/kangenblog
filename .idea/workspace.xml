@@ -1,199 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" readonly="true" id="d7c76c00-b48a-43ab-990d-65962d812ee6" name="Default" comment="更改ORM2 学习">
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\Adapters.md" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\Changelog.md" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\Contributing.md" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\License" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\Makefile" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\Readme.md" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\examples\anontxt\Readme.md" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\examples\anontxt\app\controllers\_helpers.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\examples\anontxt\app\controllers\comments_controller.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\examples\anontxt\app\controllers\home_controller.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\examples\anontxt\app\controllers\index.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\examples\anontxt\app\controllers\messages_controller.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\examples\anontxt\app\models\comment.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\examples\anontxt\app\models\index.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\examples\anontxt\app\models\message.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\examples\anontxt\config\environment.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\examples\anontxt\config\routes.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\examples\anontxt\config\settings.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\examples\anontxt\package.json" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\examples\anontxt\public\app.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\examples\anontxt\public\app.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\examples\anontxt\public\index.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\examples\anontxt\script\start" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\examples\anontxt\server.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\examples\anontxt\tasks\reset.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\lib\Adapters.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\lib\AggregateFunctions.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\lib\Associations\Extend.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\lib\Associations\Many.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\lib\Associations\One.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\lib\ChainFind.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\lib\ChainInstance.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\lib\Debug.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\lib\Drivers\DDL\SQL.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\lib\Drivers\DML\_shared.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\lib\Drivers\DML\mongodb.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\lib\Drivers\DML\mysql.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\lib\Drivers\DML\postgres.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\lib\Drivers\DML\redshift.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\lib\Drivers\DML\sqlite.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\lib\Drivers\aliases.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\lib\Error.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\lib\ErrorCodes.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\lib\Express.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\lib\Hook.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\lib\Instance.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\lib\LazyLoad.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\lib\Model.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\lib\ORM.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\lib\Promise.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\lib\Property.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\lib\Settings.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\lib\Singleton.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\lib\TypeScript\.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\lib\TypeScript\orm.d.ts" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\lib\TypeScript\sql-query.d.ts" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\lib\Utilities.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\lib\Validators.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\mem.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\enforce\.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\enforce\.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\enforce\Makefile" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\enforce\Readme.md" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\enforce\index.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\enforce\index.ts" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\enforce\lib\enforce.d.ts" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\enforce\lib\enforce.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\enforce\lib\enforce.ts" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\enforce\lib\enforcements\common.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\enforce\lib\enforcements\common.ts" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\enforce\lib\enforcements\lists.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\enforce\lib\enforcements\lists.ts" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\enforce\lib\enforcements\patterns.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\enforce\lib\enforcements\patterns.ts" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\enforce\lib\enforcements\ranges.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\enforce\lib\enforcements\ranges.ts" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\enforce\lib\enforcements\security.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\enforce\lib\enforcements\security.ts" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\enforce\lib\node.d.ts" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\enforce\lib\validator.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\enforce\lib\validator.ts" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\enforce\package.json" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\enforce\test\common.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\enforce\test\integration\chaining.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\enforce\test\integration\common.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\enforce\test\integration\enforce.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\enforce\test\integration\lists.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\enforce\test\integration\patterns.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\enforce\test\integration\ranges.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\enforce\test\integration\security.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\enforce\test\run.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\hat\README.markdown" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\hat\example\hat.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\hat\example\rack.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\hat\index.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\hat\package.json" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\hat\test\id.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\hat\test\rack.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\lodash\LICENSE.txt" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\lodash\README.md" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\lodash\dist\lodash.compat.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\lodash\dist\lodash.compat.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\lodash\dist\lodash.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\lodash\dist\lodash.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\lodash\dist\lodash.underscore.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\lodash\dist\lodash.underscore.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\lodash\lodash.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\lodash\package.json" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\sql-ddl-sync\.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\sql-ddl-sync\.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\sql-ddl-sync\Changelog.md" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\sql-ddl-sync\LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\sql-ddl-sync\Makefile" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\sql-ddl-sync\README.md" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\sql-ddl-sync\lib\Dialects\mysql.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\sql-ddl-sync\lib\Dialects\postgresql.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\sql-ddl-sync\lib\Dialects\sqlite.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\sql-ddl-sync\lib\Queue.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\sql-ddl-sync\lib\SQL.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\sql-ddl-sync\lib\Sync.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\sql-ddl-sync\package.json" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\sql-ddl-sync\test\common.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\sql-ddl-sync\test\integration\db.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\sql-ddl-sync\test\integration\mysql.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\sql-ddl-sync\test\integration\postgresql.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\sql-ddl-sync\test\integration\sql.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\sql-ddl-sync\test\integration\sqlite.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\sql-ddl-sync\test\run-db.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\sql-ddl-sync\test\run.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\sql-query\.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\sql-query\.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\sql-query\Changelog.md" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\sql-query\Makefile" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\sql-query\Readme.md" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\sql-query\lib\Comparators.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\sql-query\lib\Create.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\sql-query\lib\Dialects\mssql.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\sql-query\lib\Dialects\mysql.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\sql-query\lib\Dialects\postgresql.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\sql-query\lib\Dialects\sqlite.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\sql-query\lib\Helpers.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\sql-query\lib\Insert.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\sql-query\lib\Query.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\sql-query\lib\Remove.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\sql-query\lib\Select.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\sql-query\lib\Set.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\sql-query\lib\Update.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\sql-query\lib\Where.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\sql-query\package.json" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\sql-query\test\common.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\sql-query\test\integration\test-create.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\sql-query\test\integration\test-dialect-mssql.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\sql-query\test\integration\test-dialect-mysql.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\sql-query\test\integration\test-dialect-postgresql.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\sql-query\test\integration\test-dialect-sqlite.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\sql-query\test\integration\test-insert.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\sql-query\test\integration\test-limit.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\sql-query\test\integration\test-offset.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\sql-query\test\integration\test-order.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\sql-query\test\integration\test-remove.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\sql-query\test\integration\test-select-aggregate-groupby.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\sql-query\test\integration\test-select-aggregate.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\sql-query\test\integration\test-select-type.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\sql-query\test\integration\test-select.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\sql-query\test\integration\test-update.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\sql-query\test\integration\test-where-advanced.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\sql-query\test\integration\test-where-custom-types.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\sql-query\test\integration\test-where-exists.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\sql-query\test\integration\test-where.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\sql-query\test\lib\test-helpers.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\node_modules\sql-query\test\run.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\node_modules\orm\package.json" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\views\login.ejs" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\kangenblog\views\reg.ejs" afterPath="" />
+    <list default="true" readonly="true" id="d7c76c00-b48a-43ab-990d-65962d812ee6" name="Default" comment="更改ORM 框架 为 sequelize">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/models/s_enum.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/models/s_role.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/models/s_role_user.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/logs/access.log.1" afterPath="$PROJECT_DIR$/bin/logs/access.log.1" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/logs/access.log.2" afterPath="$PROJECT_DIR$/bin/logs/access.log.2" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/logs/access.log.3" afterPath="$PROJECT_DIR$/bin/logs/access.log.3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/logs/access.log" afterPath="$PROJECT_DIR$/bin/logs/access.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/article.js" afterPath="$PROJECT_DIR$/models/article.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/guokr/content.ejs" afterPath="$PROJECT_DIR$/views/guokr/content.ejs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/one/content.ejs" afterPath="$PROJECT_DIR$/views/one/content.ejs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/db.js" afterPath="$PROJECT_DIR$/models/db.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/template/header.ejs" afterPath="$PROJECT_DIR$/views/template/header.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/index.js" afterPath="$PROJECT_DIR$/routes/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/template/nav.ejs" afterPath="$PROJECT_DIR$/views/template/nav.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/style.css" afterPath="$PROJECT_DIR$/public/stylesheets/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/user.js" afterPath="$PROJECT_DIR$/models/user.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/users.js" afterPath="$PROJECT_DIR$/routes/users.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/guokr.js" afterPath="$PROJECT_DIR$/models/guokr.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/guokr.js" afterPath="$PROJECT_DIR$/routes/guokr.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/one.js" afterPath="$PROJECT_DIR$/routes/one.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/spider.js" afterPath="$PROJECT_DIR$/routes/spider.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="kangenblog.iws" />
@@ -216,31 +38,43 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="orm2.ejs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/orm2.ejs">
+      <file leaf-file-name="one.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/routes/one.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.7368421">
+              <caret line="73" column="24" selection-start-line="73" selection-start-column="24" selection-end-line="73" selection-end-column="24" />
+              <folding>
+                <element signature="e#0#38#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="4" column="37" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
+              <caret line="26" column="40" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="40" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="guokr.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/guokr.js">
+      <file leaf-file-name="spider.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/spider.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="33" column="30" selection-start-line="33" selection-start-column="30" selection-end-line="33" selection-end-column="30" />
+              <caret line="8" column="36" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/package.json">
+      <file leaf-file-name="one.ejs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/one/one.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6733871">
-              <caret line="23" column="14" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="14" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="20" column="15" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -287,7 +121,6 @@
         <option value="$PROJECT_DIR$/views/one/one.ejs" />
         <option value="$PROJECT_DIR$/views/one/content.ejs" />
         <option value="$PROJECT_DIR$/app.js" />
-        <option value="$PROJECT_DIR$/routes/one.js" />
         <option value="$PROJECT_DIR$/views/template/nav.ejs" />
         <option value="$PROJECT_DIR$/public/stylesheets/style.css" />
         <option value="$PROJECT_DIR$/views/template/header.ejs" />
@@ -298,10 +131,12 @@
         <option value="$PROJECT_DIR$/models/user.js" />
         <option value="$PROJECT_DIR$/service/taskService.js" />
         <option value="$PROJECT_DIR$/service/user_service.js" />
-        <option value="$PROJECT_DIR$/models/article.js" />
         <option value="$PROJECT_DIR$/routes/spider.js" />
         <option value="$PROJECT_DIR$/views/orm2.ejs" />
         <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/models/article.js" />
+        <option value="$PROJECT_DIR$/models/db.js" />
+        <option value="$PROJECT_DIR$/routes/one.js" />
       </list>
     </option>
   </component>
@@ -345,7 +180,7 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -365,16 +200,48 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kangenblog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kangenblog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kangenblog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kangenblog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="one" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$USER_HOME$/.IntelliJIdea14/system/extLibs/nodejs" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.15" />
@@ -685,7 +552,8 @@
       <workItem from="1437617951807" duration="89000" />
       <workItem from="1437643244746" duration="772000" />
       <workItem from="1437701072290" duration="59000" />
-      <workItem from="1437794751447" duration="42000" />
+      <workItem from="1437794751447" duration="6933000" />
+      <workItem from="1437833949332" duration="1067000" />
     </task>
     <task id="LOCAL-00001" summary="nothing">
       <created>1437567587033</created>
@@ -711,11 +579,17 @@
       <option name="project" value="LOCAL" />
       <updated>1437643341925</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="更改ORM 框架 为 sequelize">
+      <created>1437794895860</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1437794895860</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="131314000" />
+    <option name="totallyTimeSpent" value="139272000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -737,8 +611,10 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="JRebel Executor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30821916" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.05317324" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36581197" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.05317324" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18683812" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="JRebel" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -747,15 +623,13 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39688042" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="JRebel Executor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39688042" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36851853" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -776,7 +650,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="nothing" />
     <MESSAGE value="更改ORM2 学习" />
-    <option name="LAST_COMMIT_MESSAGE" value="更改ORM2 学习" />
+    <MESSAGE value="更改ORM 框架 为 sequelize" />
+    <option name="LAST_COMMIT_MESSAGE" value="更改ORM 框架 为 sequelize" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -789,43 +664,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/routes/guokr.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="33" column="30" selection-start-line="33" selection-start-column="30" selection-end-line="33" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/users.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/www.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="54" selection-start-line="14" selection-start-column="54" selection-end-line="14" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/utility/lib/array.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.25714287">
@@ -990,24 +828,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/one/one.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="10" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/one/content.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/one.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="3" selection-start-line="26" selection-start-column="3" selection-end-line="26" selection-end-column="3" />
         </state>
       </provider>
     </entry>
@@ -1046,13 +870,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6028169">
-          <caret line="123" column="0" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/user.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.15211268">
@@ -1081,13 +898,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/db.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="31" column="24" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/guokr.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1109,24 +919,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/article.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/spider.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="45" column="61" selection-start-line="45" selection-start-column="61" selection-end-line="45" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/orm2.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3368984">
           <caret line="7" column="42" selection-start-line="7" selection-start-column="42" selection-end-line="7" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.703704">
+          <caret line="19" column="23" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/one/one.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="15" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="15" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1140,17 +952,87 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/guokr.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.047058824">
           <caret line="33" column="30" selection-start-line="33" selection-start-column="30" selection-end-line="33" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/logs/access.log.3">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/logs/access.log.2">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.21764706">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/logs/access.log.1">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.3764706">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/logs/access.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="40" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
+    <entry file="file://$PROJECT_DIR$/routes/spider.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6733871">
-          <caret line="23" column="14" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="14" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="36" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/sequelize/lib/promise.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.59615386">
+          <caret line="52" column="25" selection-start-line="52" selection-start-column="25" selection-end-line="52" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/article.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.49117646">
+          <caret line="16" column="15" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/db.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.68235296">
+          <caret line="39" column="27" selection-start-line="39" selection-start-column="27" selection-end-line="39" selection-end-column="27" />
+          <folding>
+            <element signature="e#89#282#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/one.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7368421">
+          <caret line="73" column="24" selection-start-line="73" selection-start-column="24" selection-end-line="73" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#38#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

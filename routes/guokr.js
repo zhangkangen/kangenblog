@@ -3,20 +3,15 @@
  */
  var express = require('express');
  var Guokr = require('../models/guokr');
- var db = require('../models/db');
+ var Sequelize = require('sequelize');
  var async = require('async');
  var router = express.Router();
 
- router.get('/', function (req, res, next) {
-    db.driver.execQuery('select id,title,img from guokr order by id desc limit 10', function (err, list) {
-        if (err) return err;
-        res.render('guokr/main', {title: '谣言粉碎机', list: list});
-    });
-});
-
  router.get('/:id', function (req, res, next) {
     console.log(req.params.id);
-
+    if(!req.params.id){
+        next();
+    }
     async.parallel({
         one:function(cb){
             if(req.params.id){
@@ -43,4 +38,20 @@
         }
     });
 });
+
+ router.get('/', function (req, res, next) {
+    Guokr.findAll({
+        limit:10,
+        order:'id desc',
+        attributes:['id','title','img']
+    }).then(function(results){
+        if(results.length==0){
+            res.redirect('/');
+        }else{
+            res.render('guokr/main',{title:'谣言粉碎机',list:results});
+        }
+    });
+});
+
+
  module.exports = router;

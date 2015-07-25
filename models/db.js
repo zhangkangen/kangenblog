@@ -2,7 +2,7 @@
  * Created by 小康 on 2015/7/19.
  */
 
- var Sequelize = require('sequelize');
+var Sequelize = require('sequelize');
 var opts = {
     database: "kangblog",
     protocol: "mysql",
@@ -34,19 +34,15 @@ var optsBae = {
 
 // });
 
-var db = new Sequelize('kangblog','root','1234');
-var User = db.define('User',{
-    username: Sequelize.STRING,
-    birthday:Sequelize.DATE
+var sequelize = new Sequelize('kangblog', 'root', '1234',{
+    host:'localhost',
+    dialect:'mysql',
+    pool:{
+        max:5,
+        min:0,
+        dile:10000
+    }
 });
-db.sync().then(function(){
-    return User.create({
-        username:'janedoe',
-        birthday:new Date(1980,6,20)
-    });
-}).then(function(jane){
-    console.log(jane.get({
-        plain:true
-    }))
-});
-module.exports = db;
+
+sequelize.sync();
+module.exports = sequelize;
