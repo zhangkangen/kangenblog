@@ -15,8 +15,7 @@
     async.parallel({
         one:function(cb){
             if(req.params.id){
-                Guokr.one({id:req.params.id},function(err,result){
-                    if(err) cb(err);
+                Guokr.findById(req.params.id).then(function(result){
                     cb(null,result);
                 });
             }else{
@@ -24,9 +23,12 @@
             }
         },
         two:function(cb){
-            db.driver.execQuery('select id,title from guokr order by id desc limit 10',function(err,list){
-                if(err) cb(err);
-                cb(null,list);
+            Guokr.findAll({
+                limit:10,
+                order:'id desc',
+                attributes:['id','title']
+            }).then(function(results){
+                cb(null,results);
             });
         }
     },function(err,result){

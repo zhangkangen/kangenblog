@@ -95,8 +95,7 @@
             });
 
         },function(results){
-            console.log(results);
-            async.each(items,function(item,cb){
+            async.eachLimit(items,4,function(item,cb){
                 superagent.get(item.href).end(function(err,sres){
                     var $c = cheerio.load(sres.text, {decodeEntities: false});
                         var href = item.href;
@@ -106,6 +105,16 @@
                         var content = $c('.document').html();
                         var copyright = $c('.copyright').html();
 
+                    Guokr.create({
+                        href:href,
+                        img:img,
+                        title:title,
+                        author:author,
+                        content:content,
+                        copyright:copyright
+                    }).then(function(result){
+
+                    });
                     cb(null);
                 });
             },function(err){
