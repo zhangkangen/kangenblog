@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="d7c76c00-b48a-43ab-990d-65962d812ee6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/javascripts/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/logs/access.log" afterPath="$PROJECT_DIR$/bin/logs/access.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/guokr.js" afterPath="$PROJECT_DIR$/routes/guokr.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/template/header.ejs" afterPath="$PROJECT_DIR$/views/template/header.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/template/nav.ejs" afterPath="$PROJECT_DIR$/views/template/nav.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/style.css" afterPath="$PROJECT_DIR$/public/stylesheets/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="kangenblog.iws" />
@@ -29,7 +24,18 @@
     <favorites_list name="kangenblog" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.05732484">
+              <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -87,6 +93,7 @@
         <option value="$PROJECT_DIR$/views/template/header.ejs" />
         <option value="$PROJECT_DIR$/public/stylesheets/style.css" />
         <option value="$PROJECT_DIR$/public/javascripts/main.js" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -535,7 +542,7 @@
       <workItem from="1437643244746" duration="772000" />
       <workItem from="1437701072290" duration="59000" />
       <workItem from="1437794751447" duration="6933000" />
-      <workItem from="1437833949332" duration="6226000" />
+      <workItem from="1437833949332" duration="6415000" />
     </task>
     <task id="LOCAL-00001" summary="nothing">
       <created>1437567587033</created>
@@ -591,11 +598,17 @@
       <option name="project" value="LOCAL" />
       <updated>1437837943462</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="回到顶部&#10;">
+      <created>1437840217841</created>
+      <option name="number" value="00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1437840217841</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="144431000" />
+    <option name="totallyTimeSpent" value="144620000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -608,7 +621,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="565" y="11" width="1378" height="744" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32991454" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -661,7 +674,8 @@
     <MESSAGE value="添加marked、添加sequelize框架" />
     <MESSAGE value="登录页面" />
     <MESSAGE value="one页面guokr页面可用&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="one页面guokr页面可用&#10;" />
+    <MESSAGE value="回到顶部&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="回到顶部&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -866,13 +880,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="12" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/guokr.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1056,6 +1063,14 @@
           <folding>
             <element signature="e#0#38#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.05732484">
+          <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
+          <folding />
         </state>
       </provider>
     </entry>
