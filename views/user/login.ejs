@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <%include ../template/header%>
+</head>
+<body>
+<%include ../template/nav%>
+<div class="container container-fluid">
+    <h1><%= title %></h1>
+
+    <form class="form-horizontal" method="post">
+        <label class="form-control" for="">用户名：</label>
+        <input class="" type="text" name="name">
+        <br>
+        <label for="password">密码：</label>
+        <input type="password" name="password">
+        <br>
+        <input type="submit" value="登录">
+    </form>
+</div>
+</body>
+</html>

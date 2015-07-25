@@ -1,21 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" readonly="true" id="d7c76c00-b48a-43ab-990d-65962d812ee6" name="Default" comment="更改ORM 框架 为 sequelize">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/models/s_enum.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/models/s_role.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/models/s_role_user.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/logs/access.log.1" afterPath="$PROJECT_DIR$/bin/logs/access.log.1" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/logs/access.log.2" afterPath="$PROJECT_DIR$/bin/logs/access.log.2" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/logs/access.log.3" afterPath="$PROJECT_DIR$/bin/logs/access.log.3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/logs/access.log" afterPath="$PROJECT_DIR$/bin/logs/access.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/article.js" afterPath="$PROJECT_DIR$/models/article.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/one/content.ejs" afterPath="$PROJECT_DIR$/views/one/content.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/db.js" afterPath="$PROJECT_DIR$/models/db.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/guokr.js" afterPath="$PROJECT_DIR$/models/guokr.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/guokr.js" afterPath="$PROJECT_DIR$/routes/guokr.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/one.js" afterPath="$PROJECT_DIR$/routes/one.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/spider.js" afterPath="$PROJECT_DIR$/routes/spider.js" />
+    <list default="true" readonly="true" id="d7c76c00-b48a-43ab-990d-65962d812ee6" name="Default" comment="登录页面">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/user/login.ejs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/user/reg.ejs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="kangenblog.iws" />
@@ -41,8 +29,8 @@
       <file leaf-file-name="one.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/one.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7368421">
-              <caret line="73" column="24" selection-start-line="73" selection-start-column="24" selection-end-line="73" selection-end-column="24" />
+            <state vertical-scroll-proportion="0.8374656">
+              <caret line="65" column="25" selection-start-line="65" selection-start-column="25" selection-end-line="65" selection-end-column="25" />
               <folding>
                 <element signature="e#0#38#0" expanded="false" />
               </folding>
@@ -228,7 +216,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="one" />
+              <option name="myItemId" value="user" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -553,7 +541,7 @@
       <workItem from="1437643244746" duration="772000" />
       <workItem from="1437701072290" duration="59000" />
       <workItem from="1437794751447" duration="6933000" />
-      <workItem from="1437833949332" duration="1067000" />
+      <workItem from="1437833949332" duration="1572000" />
     </task>
     <task id="LOCAL-00001" summary="nothing">
       <created>1437567587033</created>
@@ -585,11 +573,23 @@
       <option name="project" value="LOCAL" />
       <updated>1437794895860</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="修改one、修改果壳谣言粉碎机">
+      <created>1437835071645</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1437835071645</updated>
+    </task>
+    <task id="LOCAL-00007" summary="添加marked、添加sequelize框架">
+      <created>1437835353572</created>
+      <option name="number" value="00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1437835353572</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="139272000" />
+    <option name="totallyTimeSpent" value="139777000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -607,13 +607,14 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32991454" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="FindBugs-IDEA" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32991454" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32991454" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="JRebel Executor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30821916" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36581197" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36581197" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.05317324" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18683812" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -628,7 +629,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -651,7 +651,10 @@
     <MESSAGE value="nothing" />
     <MESSAGE value="更改ORM2 学习" />
     <MESSAGE value="更改ORM 框架 为 sequelize" />
-    <option name="LAST_COMMIT_MESSAGE" value="更改ORM 框架 为 sequelize" />
+    <MESSAGE value="修改one、修改果壳谣言粉碎机" />
+    <MESSAGE value="添加marked、添加sequelize框架" />
+    <MESSAGE value="登录页面" />
+    <option name="LAST_COMMIT_MESSAGE" value="登录页面" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -954,6 +957,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.047058824">
           <caret line="33" column="30" selection-start-line="33" selection-start-column="30" selection-end-line="33" selection-end-column="30" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -961,6 +965,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -968,6 +973,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.21764706">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -975,6 +981,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.3764706">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -982,6 +989,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="51" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1005,6 +1013,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.59615386">
           <caret line="52" column="25" selection-start-line="52" selection-start-column="25" selection-end-line="52" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1028,8 +1037,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/one.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7368421">
-          <caret line="73" column="24" selection-start-line="73" selection-start-column="24" selection-end-line="73" selection-end-column="24" />
+        <state vertical-scroll-proportion="0.8374656">
+          <caret line="65" column="25" selection-start-line="65" selection-start-column="25" selection-end-line="65" selection-end-column="25" />
           <folding>
             <element signature="e#0#38#0" expanded="false" />
           </folding>
