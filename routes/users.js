@@ -6,7 +6,7 @@ var router = express.Router();
 
 /* GET users listing. */
 router.get('/', function (req, res, next) {
-    next();
+    res.render('user/test',{title:'测试页面'});
 });
 /*这是登录页面*/
 router.get('/login', function (req, res, next) {

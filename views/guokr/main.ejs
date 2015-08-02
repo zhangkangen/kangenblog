@@ -6,13 +6,14 @@
 </head>
 <body>
 <% include ../template/nav.ejs %>
-<div class="container-fluid">
+<div class="container">
     <div class="row">
         <% if(list.length){ %>
         <% list.forEach(function(item){ %>
         <div class="col-md-3">
             <div class="thumbnail">
-                <a href="/guokr/<%= item.id %>"><img class="img-responsive" src="<%= item.img %>" alt=""/></a>
+                <a href="/guokr/<%= item.id %>"><img class="img-responsive" width="99% \9" src="<%= item.img %>"
+                                                     alt=""/></a>
                 <div class="caption">
                     <a href="/guokr/<%= item.id %>"><%= item.title %></a>
                 </div>
@@ -21,7 +22,7 @@
         <% }); %>
         <% } %>
     </div>
-
+<%include ../template/footer.ejs%>
 </div>
 </body>
 </html>

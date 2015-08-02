@@ -2,22 +2,49 @@
 <html>
 <head>
     <title><%= title %></title>
-    <%include ../template/header%>
+    <% include ../template/header %>
+    <style>
+        .glyphicon{
+            top:0;
+        }
+    </style>
 </head>
 <body>
-<%include ../template/nav%>
-<div class="container container-fluid">
-    <h1><%= title %></h1>
-
-    <form class="form-horizontal" method="post">
-        <label class="form-control" for="">用户名：</label>
-        <input class="" type="text" name="name">
-        <br>
-        <label for="password">密码：</label>
-        <input type="password" name="password">
-        <br>
-        <input type="submit" value="登录">
-    </form>
+<% include ../template/nav %>
+<div class="jumbotron">
+<div class="container">
+    <div class="loginBox row">
+        <form method="post" class="form-horizontal col-md-offset-1 col-md-5">
+            <h3 class="text-center">用户登录</h3>
+            <div class="form-group">
+                <label for="nick_name" class="col-sm-2 col-md-2 control-label">用户名</label>
+                <div class="col-sm-10 col-md-10 input-group">
+                    <span class="input-group-addon glyphicon glyphicon-user"></span>
+                    <input type="text" class="form-control" name="nick_name" placeholder="用户名"
+                           aria-describedby="basic-addon1" value="" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="user_password" class="col-sm-2 col-md-2 control-label">密码</label>
+                <div class="col-sm-10 col-md-10 input-group">
+                    <span class="input-group-addon glyphicon glyphicon-lock"></span>
+                    <input type="password" class="form-control" name="user_password" placeholder="密码" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-4 col-sm-10"></div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-4 col-sm-10 col-md-10">
+                    <input type="hidden" name="url" value="/admin"/>
+                    <button class="btn btn-info" data-loading-text="正在登录..." type="submit">登 录</button>
+                    <button class="btn btn-info" type="reset">清 空</button>
+                </div>
+            </div>
+        </form>
+    </div>
 </div>
+</div>
+<%include ../template/footer.ejs%>
 </body>
 </html>
