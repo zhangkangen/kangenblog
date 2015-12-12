@@ -1,2 +1,6 @@
 [2015-08-02 17:14:08.662] [ERROR] normal - GET/users
-[2015-08-02 17:15:28.410] [ERROR] normal - GET/users
+                                                          [2015-08-02 17:15:28.410] [ERROR] normal - GET/users
+                                                          [2015-12-03 14:33:09.072] [ERROR] normal - GET/favicon.ico
+                                                          [2015-12-04 13:47:19.389] [ERROR] normal - GET/favicon.ico
+[2015-12-12 15:21:42.434] [ERROR] normal - GET/favicon.ico
+[2015-12-12 15:30:26.696] [ERROR] normal - GET/panSearch
