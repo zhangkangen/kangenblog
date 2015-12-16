@@ -28,7 +28,7 @@ var spider = require('./routes/spider');
 var orm2 = require('./routes/orm2');
 var one = require('./routes/one');
 var guokr = require('./routes/guokr');
-
+var panSearch = require('./routes/panSearch');
 
 var app = express();
 
@@ -63,6 +63,7 @@ app.use('/spider', spider);
 app.use('/orm2', orm2);
 app.use('/one', one);
 app.use('/guokr', guokr);
+app.use('/panSearch', panSearch);
 
 
 // catch 404 and forward to error handler
@@ -97,7 +98,6 @@ app.use(function (err, req, res, next) {
 });
 
 
-
 var task = require('./common/task');
 var later = require('later');
 later.date.localTime();
@@ -110,7 +110,7 @@ var schedule = {
 var t = later.setInterval(task, schedule);
 
 var guokrTask = require('./common/guokrTask');
-var composite2 = [{h: [2], m: [0]},{h:[14],m:[0]}];
+var composite2 = [{h: [2], m: [0]}, {h: [14], m: [0]}];
 var schedule2 = {
     schedules: composite2
 };

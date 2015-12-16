@@ -1,6 +1,13 @@
-[2015-08-02 17:14:08.662] [ERROR] normal - GET/users
-                                                          [2015-08-02 17:15:28.410] [ERROR] normal - GET/users
-                                                          [2015-12-03 14:33:09.072] [ERROR] normal - GET/favicon.ico
-                                                          [2015-12-04 13:47:19.389] [ERROR] normal - GET/favicon.ico
-[2015-12-12 15:21:42.434] [ERROR] normal - GET/favicon.ico
-[2015-12-12 15:30:26.696] [ERROR] normal - GET/panSearch
+[2015-12-12 15:49:39.383] [ERROR] normal - GET/panSearch
+[2015-12-12 15:50:16.932] [ERROR] normal - GET/panSearch
+[2015-12-12 15:56:51.491] [ERROR] normal - POST/panSearch?key=
+[2015-12-12 16:46:40.677] [ERROR] normal - POST/panSearch?key=
+[2015-12-12 16:46:45.760] [ERROR] normal - POST/panSearch
+[2015-12-16 11:08:19.102] [ERROR] normal - GET/favicon.ico
+[2015-12-16 12:31:45.437] [ERROR] normal - GET/panSearch
+[2015-12-16 12:31:51.165] [ERROR] normal - GET/panSearch
+[2015-12-16 12:33:13.543] [ERROR] normal - GET/panSearch
+[2015-12-16 12:33:15.548] [ERROR] normal - GET/panSearch
+[2015-12-16 12:33:40.917] [ERROR] normal - GET/panSearch
+[2015-12-16 12:33:42.554] [ERROR] normal - GET/panSearch
+[2015-12-16 12:33:56.695] [ERROR] normal - GET/panSearch
